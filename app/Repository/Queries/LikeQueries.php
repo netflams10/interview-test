@@ -22,11 +22,11 @@ class LikeQueries
 
     public function like ($request)
     {
-        return $this->model->where('post_id', $request->post_id)->update(['likes' => $this->show($request->post_id) + 1]);
+        return $this->model->where('post_id', $request->post_id)->update(['likes' => $this->show($request->post_id)->like + 1]);
     }
 
     public function unlike ($request)
     {
-        return $this->model->where('post_id', $request->post_id)->update(['likes' => $this->show($request->post_id) - 1]);
+        return $this->model->where('post_id', $request->post_id)->update(['likes' => $this->show($request->post_id)->like - 1]);
     }
 }

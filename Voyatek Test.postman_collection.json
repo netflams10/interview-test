@@ -1,0 +1,1828 @@
+{
+	"info": {
+		"_postman_id": "728d9f7f-b661-4a6f-9b28-3068a74d664e",
+		"name": "Voyatek Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "10457154",
+		"_collection_link": "https://cloudy-space-622572.postman.co/workspace/Corporate-Service~5f0076b3-502d-4c58-a8b9-4041bc42968e/collection/10457154-728d9f7f-b661-4a6f-9b28-3068a74d664e?action=share&source=collection_link&creator=10457154"
+	},
+	"item": [
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "Get Blog",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/get-blogs/2"
+					},
+					"response": [
+						{
+							"name": "all-posts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/get-posts"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 10:36:32 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6Ii9ZTzVHK0JlYzdtdU8vd0FXdElNYnc9PSIsInZhbHVlIjoiWEtlWVZYTEE5Qy9LQk8yVklPdlA2am5SQ21NMjY0UWNBck9venMyYTRWdUZaRG8vcFVFM25KWXh1bVZqWmJuTmt6VWJWUnI5cXFnUlhHcHZLQ1pobWRJQVB4bGJMc3JUZ1lVZ1lZa1YyWXAxcDZhMGtmdnJSNzU1cGNVL3RWV3oiLCJtYWMiOiJjYzU1MjNjNDE3ZGJhM2RhMDZkZDNlOWQ3MjVkMjZjNzRkMzdmMmQ3MDYzZDZjZDc1ZWE0YTU0YTgyZjcxYmYzIiwidGFnIjoiIn0%3D; expires=Wed, 24 Jul 2024 12:36:32 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "voyatek_session=eyJpdiI6IjhQVHEyanlTWHg2dHdYMXhFd3VRZHc9PSIsInZhbHVlIjoiR1pucXI2dGE4Q0k3Mjk5T25NeklzaXFOUzdicWhqYUMzOXVkMVNpTkhLSEZ0VkVCcGJONWV0b2ZuNUM5RitqZnZWaWZsS00zQ2FYcXQ3NHQ3bHVYeXdMWmR2WitQVnhWK3hoYytqWVlmcWpzcTM2amVRZkFHNzQrM1g0aE5jV0UiLCJtYWMiOiIxNTNhYzdhNjdjZjBkZjVjY2FkYzlkZjc0NjU5YjlhYTAwNGYyMGViNzI0MWQ2NjhkMjAzYjU4YzMzYjNlNTEyIiwidGFnIjoiIn0%3D; expires=Wed, 24 Jul 2024 12:36:32 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"blog_id\": 1,\n            \"title\": \"Omnis harum vel.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/001111?text=est\",\n            \"article\": \"Perferendis vel sint et deleniti. Voluptate ea voluptatem qui porro voluptas aperiam. Similique incidunt quia tenetur quaerat voluptatem autem.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"blog_id\": 1,\n            \"title\": \"Aut ut consequatur.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0099ee?text=aut\",\n            \"article\": \"Earum in ab sed molestias voluptatem. Qui quisquam minus omnis officiis itaque. Iste qui culpa sequi eligendi. Reprehenderit doloribus hic dolores et officia quas.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"blog_id\": 2,\n            \"title\": \"Quis ut nihil.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/00aa33?text=occaecati\",\n            \"article\": \"Fugiat at maiores enim omnis. Eius aut sit amet iste et ratione nihil amet. Tenetur eaque atque porro incidunt eveniet veniam.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"blog_id\": 1,\n            \"title\": \"Est ut consequatur.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/00ee11?text=amet\",\n            \"article\": \"Sed aut aut esse sapiente. Quidem quos occaecati dignissimos odio ut sit iusto. Deserunt incidunt vero delectus sed.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"blog_id\": 2,\n            \"title\": \"Iure quaerat sunt.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/003333?text=quae\",\n            \"article\": \"Esse et ea aut architecto. Earum ut sint repudiandae nam voluptas tempora. Vitae ratione molestiae aliquid et voluptatem magni rerum. Optio ab in et alias impedit provident.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"blog_id\": 1,\n            \"title\": \"Fugiat adipisci.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0066ee?text=nam\",\n            \"article\": \"Qui officia ipsum ea asperiores sit excepturi non. Eos aliquid iure sed voluptatem iste a est. Fugiat sed dolorum esse aspernatur occaecati nemo.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"blog_id\": 1,\n            \"title\": \"Eius quo a est non.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/000088?text=voluptatem\",\n            \"article\": \"Et autem tempora dolores. Iure sed quas sit voluptas quis ea facilis quia. Occaecati magni ea quos rerum. Vitae voluptatem quia cumque aut.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"blog_id\": 1,\n            \"title\": \"Assumenda deleniti.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/008822?text=saepe\",\n            \"article\": \"At cupiditate est nulla iste fugit porro. Voluptates autem ducimus nulla similique sint qui. Quasi rerum et et quam accusantium omnis.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"blog_id\": 2,\n            \"title\": \"Nihil recusandae.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0011bb?text=ut\",\n            \"article\": \"Iusto ea illum et exercitationem vel dicta nihil. Voluptatem saepe aut et quia et molestiae voluptatem officiis. Esse omnis optio ratione laboriosam.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"blog_id\": 1,\n            \"title\": \"Nihil qui deleniti.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0022ff?text=accusamus\",\n            \"article\": \"Incidunt nostrum eius laborum quia quod praesentium numquam. Vel nihil velit aut. Debitis sunt tempora deleniti unde exercitationem. Exercitationem qui assumenda ipsam illo.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost:3050/get-posts?page=1\",\n    \"from\": 1,\n    \"last_page\": 2,\n    \"last_page_url\": \"http://localhost:3050/get-posts?page=2\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:3050/get-posts?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": \"http://localhost:3050/get-posts?page=2\",\n            \"label\": \"2\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:3050/get-posts?page=2\",\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": \"http://localhost:3050/get-posts?page=2\",\n    \"path\": \"http://localhost:3050/get-posts\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 20\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Vetto\",\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/get-blogs"
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Vetto\",\n    \"id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/get-blogs"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 11:24:36 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": true,\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Vetto\",\n        \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n        \"updated_at\": \"2024-07-24T11:24:36.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Blog",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Techzbyte\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/get-blogs"
+					},
+					"response": [
+						{
+							"name": "all-posts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/get-posts"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 10:36:32 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6Ii9ZTzVHK0JlYzdtdU8vd0FXdElNYnc9PSIsInZhbHVlIjoiWEtlWVZYTEE5Qy9LQk8yVklPdlA2am5SQ21NMjY0UWNBck9venMyYTRWdUZaRG8vcFVFM25KWXh1bVZqWmJuTmt6VWJWUnI5cXFnUlhHcHZLQ1pobWRJQVB4bGJMc3JUZ1lVZ1lZa1YyWXAxcDZhMGtmdnJSNzU1cGNVL3RWV3oiLCJtYWMiOiJjYzU1MjNjNDE3ZGJhM2RhMDZkZDNlOWQ3MjVkMjZjNzRkMzdmMmQ3MDYzZDZjZDc1ZWE0YTU0YTgyZjcxYmYzIiwidGFnIjoiIn0%3D; expires=Wed, 24 Jul 2024 12:36:32 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "voyatek_session=eyJpdiI6IjhQVHEyanlTWHg2dHdYMXhFd3VRZHc9PSIsInZhbHVlIjoiR1pucXI2dGE4Q0k3Mjk5T25NeklzaXFOUzdicWhqYUMzOXVkMVNpTkhLSEZ0VkVCcGJONWV0b2ZuNUM5RitqZnZWaWZsS00zQ2FYcXQ3NHQ3bHVYeXdMWmR2WitQVnhWK3hoYytqWVlmcWpzcTM2amVRZkFHNzQrM1g0aE5jV0UiLCJtYWMiOiIxNTNhYzdhNjdjZjBkZjVjY2FkYzlkZjc0NjU5YjlhYTAwNGYyMGViNzI0MWQ2NjhkMjAzYjU4YzMzYjNlNTEyIiwidGFnIjoiIn0%3D; expires=Wed, 24 Jul 2024 12:36:32 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"blog_id\": 1,\n            \"title\": \"Omnis harum vel.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/001111?text=est\",\n            \"article\": \"Perferendis vel sint et deleniti. Voluptate ea voluptatem qui porro voluptas aperiam. Similique incidunt quia tenetur quaerat voluptatem autem.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"blog_id\": 1,\n            \"title\": \"Aut ut consequatur.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0099ee?text=aut\",\n            \"article\": \"Earum in ab sed molestias voluptatem. Qui quisquam minus omnis officiis itaque. Iste qui culpa sequi eligendi. Reprehenderit doloribus hic dolores et officia quas.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"blog_id\": 2,\n            \"title\": \"Quis ut nihil.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/00aa33?text=occaecati\",\n            \"article\": \"Fugiat at maiores enim omnis. Eius aut sit amet iste et ratione nihil amet. Tenetur eaque atque porro incidunt eveniet veniam.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"blog_id\": 1,\n            \"title\": \"Est ut consequatur.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/00ee11?text=amet\",\n            \"article\": \"Sed aut aut esse sapiente. Quidem quos occaecati dignissimos odio ut sit iusto. Deserunt incidunt vero delectus sed.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"blog_id\": 2,\n            \"title\": \"Iure quaerat sunt.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/003333?text=quae\",\n            \"article\": \"Esse et ea aut architecto. Earum ut sint repudiandae nam voluptas tempora. Vitae ratione molestiae aliquid et voluptatem magni rerum. Optio ab in et alias impedit provident.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"blog_id\": 1,\n            \"title\": \"Fugiat adipisci.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0066ee?text=nam\",\n            \"article\": \"Qui officia ipsum ea asperiores sit excepturi non. Eos aliquid iure sed voluptatem iste a est. Fugiat sed dolorum esse aspernatur occaecati nemo.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"blog_id\": 1,\n            \"title\": \"Eius quo a est non.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/000088?text=voluptatem\",\n            \"article\": \"Et autem tempora dolores. Iure sed quas sit voluptas quis ea facilis quia. Occaecati magni ea quos rerum. Vitae voluptatem quia cumque aut.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"blog_id\": 1,\n            \"title\": \"Assumenda deleniti.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/008822?text=saepe\",\n            \"article\": \"At cupiditate est nulla iste fugit porro. Voluptates autem ducimus nulla similique sint qui. Quasi rerum et et quam accusantium omnis.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"blog_id\": 2,\n            \"title\": \"Nihil recusandae.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0011bb?text=ut\",\n            \"article\": \"Iusto ea illum et exercitationem vel dicta nihil. Voluptatem saepe aut et quia et molestiae voluptatem officiis. Esse omnis optio ratione laboriosam.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"blog_id\": 1,\n            \"title\": \"Nihil qui deleniti.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0022ff?text=accusamus\",\n            \"article\": \"Incidunt nostrum eius laborum quia quod praesentium numquam. Vel nihil velit aut. Debitis sunt tempora deleniti unde exercitationem. Exercitationem qui assumenda ipsam illo.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost:3050/get-posts?page=1\",\n    \"from\": 1,\n    \"last_page\": 2,\n    \"last_page_url\": \"http://localhost:3050/get-posts?page=2\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:3050/get-posts?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": \"http://localhost:3050/get-posts?page=2\",\n            \"label\": \"2\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:3050/get-posts?page=2\",\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": \"http://localhost:3050/get-posts?page=2\",\n    \"path\": \"http://localhost:3050/get-posts\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 20\n}"
+						},
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Techzbyte\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/get-blogs"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 11:19:16 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": true,\n    \"data\": {\n        \"name\": \"Techzbyte\",\n        \"updated_at\": \"2024-07-24T11:19:16.000000Z\",\n        \"created_at\": \"2024-07-24T11:19:16.000000Z\",\n        \"id\": 3\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Blog",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/get-blogs/1"
+					},
+					"response": [
+						{
+							"name": "all-posts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/get-posts"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 10:36:32 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6Ii9ZTzVHK0JlYzdtdU8vd0FXdElNYnc9PSIsInZhbHVlIjoiWEtlWVZYTEE5Qy9LQk8yVklPdlA2am5SQ21NMjY0UWNBck9venMyYTRWdUZaRG8vcFVFM25KWXh1bVZqWmJuTmt6VWJWUnI5cXFnUlhHcHZLQ1pobWRJQVB4bGJMc3JUZ1lVZ1lZa1YyWXAxcDZhMGtmdnJSNzU1cGNVL3RWV3oiLCJtYWMiOiJjYzU1MjNjNDE3ZGJhM2RhMDZkZDNlOWQ3MjVkMjZjNzRkMzdmMmQ3MDYzZDZjZDc1ZWE0YTU0YTgyZjcxYmYzIiwidGFnIjoiIn0%3D; expires=Wed, 24 Jul 2024 12:36:32 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "voyatek_session=eyJpdiI6IjhQVHEyanlTWHg2dHdYMXhFd3VRZHc9PSIsInZhbHVlIjoiR1pucXI2dGE4Q0k3Mjk5T25NeklzaXFOUzdicWhqYUMzOXVkMVNpTkhLSEZ0VkVCcGJONWV0b2ZuNUM5RitqZnZWaWZsS00zQ2FYcXQ3NHQ3bHVYeXdMWmR2WitQVnhWK3hoYytqWVlmcWpzcTM2amVRZkFHNzQrM1g0aE5jV0UiLCJtYWMiOiIxNTNhYzdhNjdjZjBkZjVjY2FkYzlkZjc0NjU5YjlhYTAwNGYyMGViNzI0MWQ2NjhkMjAzYjU4YzMzYjNlNTEyIiwidGFnIjoiIn0%3D; expires=Wed, 24 Jul 2024 12:36:32 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"blog_id\": 1,\n            \"title\": \"Omnis harum vel.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/001111?text=est\",\n            \"article\": \"Perferendis vel sint et deleniti. Voluptate ea voluptatem qui porro voluptas aperiam. Similique incidunt quia tenetur quaerat voluptatem autem.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"blog_id\": 1,\n            \"title\": \"Aut ut consequatur.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0099ee?text=aut\",\n            \"article\": \"Earum in ab sed molestias voluptatem. Qui quisquam minus omnis officiis itaque. Iste qui culpa sequi eligendi. Reprehenderit doloribus hic dolores et officia quas.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"blog_id\": 2,\n            \"title\": \"Quis ut nihil.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/00aa33?text=occaecati\",\n            \"article\": \"Fugiat at maiores enim omnis. Eius aut sit amet iste et ratione nihil amet. Tenetur eaque atque porro incidunt eveniet veniam.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"blog_id\": 1,\n            \"title\": \"Est ut consequatur.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/00ee11?text=amet\",\n            \"article\": \"Sed aut aut esse sapiente. Quidem quos occaecati dignissimos odio ut sit iusto. Deserunt incidunt vero delectus sed.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"blog_id\": 2,\n            \"title\": \"Iure quaerat sunt.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/003333?text=quae\",\n            \"article\": \"Esse et ea aut architecto. Earum ut sint repudiandae nam voluptas tempora. Vitae ratione molestiae aliquid et voluptatem magni rerum. Optio ab in et alias impedit provident.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"blog_id\": 1,\n            \"title\": \"Fugiat adipisci.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0066ee?text=nam\",\n            \"article\": \"Qui officia ipsum ea asperiores sit excepturi non. Eos aliquid iure sed voluptatem iste a est. Fugiat sed dolorum esse aspernatur occaecati nemo.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"blog_id\": 1,\n            \"title\": \"Eius quo a est non.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/000088?text=voluptatem\",\n            \"article\": \"Et autem tempora dolores. Iure sed quas sit voluptas quis ea facilis quia. Occaecati magni ea quos rerum. Vitae voluptatem quia cumque aut.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"blog_id\": 1,\n            \"title\": \"Assumenda deleniti.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/008822?text=saepe\",\n            \"article\": \"At cupiditate est nulla iste fugit porro. Voluptates autem ducimus nulla similique sint qui. Quasi rerum et et quam accusantium omnis.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"blog_id\": 2,\n            \"title\": \"Nihil recusandae.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0011bb?text=ut\",\n            \"article\": \"Iusto ea illum et exercitationem vel dicta nihil. Voluptatem saepe aut et quia et molestiae voluptatem officiis. Esse omnis optio ratione laboriosam.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"blog_id\": 1,\n            \"title\": \"Nihil qui deleniti.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0022ff?text=accusamus\",\n            \"article\": \"Incidunt nostrum eius laborum quia quod praesentium numquam. Vel nihil velit aut. Debitis sunt tempora deleniti unde exercitationem. Exercitationem qui assumenda ipsam illo.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost:3050/get-posts?page=1\",\n    \"from\": 1,\n    \"last_page\": 2,\n    \"last_page_url\": \"http://localhost:3050/get-posts?page=2\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:3050/get-posts?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": \"http://localhost:3050/get-posts?page=2\",\n            \"label\": \"2\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:3050/get-posts?page=2\",\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": \"http://localhost:3050/get-posts?page=2\",\n    \"path\": \"http://localhost:3050/get-posts\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 20\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Blogs",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/get-blogs"
+					},
+					"response": [
+						{
+							"name": "all-posts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/get-posts"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 10:36:32 GMT"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6Ii9ZTzVHK0JlYzdtdU8vd0FXdElNYnc9PSIsInZhbHVlIjoiWEtlWVZYTEE5Qy9LQk8yVklPdlA2am5SQ21NMjY0UWNBck9venMyYTRWdUZaRG8vcFVFM25KWXh1bVZqWmJuTmt6VWJWUnI5cXFnUlhHcHZLQ1pobWRJQVB4bGJMc3JUZ1lVZ1lZa1YyWXAxcDZhMGtmdnJSNzU1cGNVL3RWV3oiLCJtYWMiOiJjYzU1MjNjNDE3ZGJhM2RhMDZkZDNlOWQ3MjVkMjZjNzRkMzdmMmQ3MDYzZDZjZDc1ZWE0YTU0YTgyZjcxYmYzIiwidGFnIjoiIn0%3D; expires=Wed, 24 Jul 2024 12:36:32 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "voyatek_session=eyJpdiI6IjhQVHEyanlTWHg2dHdYMXhFd3VRZHc9PSIsInZhbHVlIjoiR1pucXI2dGE4Q0k3Mjk5T25NeklzaXFOUzdicWhqYUMzOXVkMVNpTkhLSEZ0VkVCcGJONWV0b2ZuNUM5RitqZnZWaWZsS00zQ2FYcXQ3NHQ3bHVYeXdMWmR2WitQVnhWK3hoYytqWVlmcWpzcTM2amVRZkFHNzQrM1g0aE5jV0UiLCJtYWMiOiIxNTNhYzdhNjdjZjBkZjVjY2FkYzlkZjc0NjU5YjlhYTAwNGYyMGViNzI0MWQ2NjhkMjAzYjU4YzMzYjNlNTEyIiwidGFnIjoiIn0%3D; expires=Wed, 24 Jul 2024 12:36:32 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"blog_id\": 1,\n            \"title\": \"Omnis harum vel.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/001111?text=est\",\n            \"article\": \"Perferendis vel sint et deleniti. Voluptate ea voluptatem qui porro voluptas aperiam. Similique incidunt quia tenetur quaerat voluptatem autem.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"blog_id\": 1,\n            \"title\": \"Aut ut consequatur.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0099ee?text=aut\",\n            \"article\": \"Earum in ab sed molestias voluptatem. Qui quisquam minus omnis officiis itaque. Iste qui culpa sequi eligendi. Reprehenderit doloribus hic dolores et officia quas.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"blog_id\": 2,\n            \"title\": \"Quis ut nihil.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/00aa33?text=occaecati\",\n            \"article\": \"Fugiat at maiores enim omnis. Eius aut sit amet iste et ratione nihil amet. Tenetur eaque atque porro incidunt eveniet veniam.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"blog_id\": 1,\n            \"title\": \"Est ut consequatur.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/00ee11?text=amet\",\n            \"article\": \"Sed aut aut esse sapiente. Quidem quos occaecati dignissimos odio ut sit iusto. Deserunt incidunt vero delectus sed.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"blog_id\": 2,\n            \"title\": \"Iure quaerat sunt.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/003333?text=quae\",\n            \"article\": \"Esse et ea aut architecto. Earum ut sint repudiandae nam voluptas tempora. Vitae ratione molestiae aliquid et voluptatem magni rerum. Optio ab in et alias impedit provident.\",\n            \"created_at\": \"2024-07-24T10:32:57.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:57.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"blog_id\": 1,\n            \"title\": \"Fugiat adipisci.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0066ee?text=nam\",\n            \"article\": \"Qui officia ipsum ea asperiores sit excepturi non. Eos aliquid iure sed voluptatem iste a est. Fugiat sed dolorum esse aspernatur occaecati nemo.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"blog_id\": 1,\n            \"title\": \"Eius quo a est non.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/000088?text=voluptatem\",\n            \"article\": \"Et autem tempora dolores. Iure sed quas sit voluptas quis ea facilis quia. Occaecati magni ea quos rerum. Vitae voluptatem quia cumque aut.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"blog_id\": 1,\n            \"title\": \"Assumenda deleniti.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/008822?text=saepe\",\n            \"article\": \"At cupiditate est nulla iste fugit porro. Voluptates autem ducimus nulla similique sint qui. Quasi rerum et et quam accusantium omnis.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"blog_id\": 2,\n            \"title\": \"Nihil recusandae.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0011bb?text=ut\",\n            \"article\": \"Iusto ea illum et exercitationem vel dicta nihil. Voluptatem saepe aut et quia et molestiae voluptatem officiis. Esse omnis optio ratione laboriosam.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"blog_id\": 1,\n            \"title\": \"Nihil qui deleniti.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0022ff?text=accusamus\",\n            \"article\": \"Incidunt nostrum eius laborum quia quod praesentium numquam. Vel nihil velit aut. Debitis sunt tempora deleniti unde exercitationem. Exercitationem qui assumenda ipsam illo.\",\n            \"created_at\": \"2024-07-24T10:32:58.000000Z\",\n            \"updated_at\": \"2024-07-24T10:32:58.000000Z\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost:3050/get-posts?page=1\",\n    \"from\": 1,\n    \"last_page\": 2,\n    \"last_page_url\": \"http://localhost:3050/get-posts?page=2\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:3050/get-posts?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": \"http://localhost:3050/get-posts?page=2\",\n            \"label\": \"2\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:3050/get-posts?page=2\",\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": \"http://localhost:3050/get-posts?page=2\",\n    \"path\": \"http://localhost:3050/get-posts\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 20\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/get-posts/1"
+					},
+					"response": [
+						{
+							"name": "Delete Blog",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/get-posts/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 11:58:28 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": true,\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"title\": \"How to Install Android Rom\",\n    \"image\": \"https://placehold.co/600x400\",\n    \"article\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan vestibulum nisi a eleifend. Suspendisse ut mollis turpis, in accumsan nibh. Vivamus ut auctor turpis. Etiam eget fermentum mi, non rutrum nulla. Mauris posuere, nisl quis finibus tempor, felis ante dictum nisl, accumsan placerat odio nunc non lorem. Suspendisse ut metus id enim feugiat tempor. Mauris vestibulum dolor erat, ac ultrices lorem ornare pulvinar. Nam sit amet risus nec turpis imperdiet ultricies. Cras hendrerit rhoncus maximus. Nulla eu dolor nisi. Nunc pellentesque nec justo in posuere. Sed elementum vitae lectus sed ullamcorper. Proin sagittis vulputate massa, ut finibus nibh lacinia non.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/get-posts"
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 3,\n    \"title\": \"How to Install Android Rom\",\n    \"image\": \"https://placehold.co/600x400\",\n    \"article\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan vestibulum nisi a eleifend. Suspendisse ut mollis turpis, in accumsan nibh. Vivamus ut auctor turpis. Etiam eget fermentum mi, non rutrum nulla. Mauris posuere, nisl quis finibus tempor, felis ante dictum nisl, accumsan placerat odio nunc non lorem. Suspendisse ut metus id enim feugiat tempor. Mauris vestibulum dolor erat, ac ultrices lorem ornare pulvinar. Nam sit amet risus nec turpis imperdiet ultricies. Cras hendrerit rhoncus maximus. Nulla eu dolor nisi. Nunc pellentesque nec justo in posuere. Sed elementum vitae lectus sed ullamcorper. Proin sagittis vulputate massa, ut finibus nibh lacinia non.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/get-posts"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 11:59:22 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": true,\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"How to Install Android Rom\",\n        \"image\": \"https://placehold.co/600x400\",\n        \"article\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan vestibulum nisi a eleifend. Suspendisse ut mollis turpis, in accumsan nibh. Vivamus ut auctor turpis. Etiam eget fermentum mi, non rutrum nulla. Mauris posuere, nisl quis finibus tempor, felis ante dictum nisl, accumsan placerat odio nunc non lorem. Suspendisse ut metus id enim feugiat tempor. Mauris vestibulum dolor erat, ac ultrices lorem ornare pulvinar. Nam sit amet risus nec turpis imperdiet ultricies. Cras hendrerit rhoncus maximus. Nulla eu dolor nisi. Nunc pellentesque nec justo in posuere. Sed elementum vitae lectus sed ullamcorper. Proin sagittis vulputate massa, ut finibus nibh lacinia non.\",\n        \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n        \"updated_at\": \"2024-07-24T11:59:22.000000Z\",\n        \"blog\": {\n            \"id\": 3,\n            \"name\": \"Techzbyte\",\n            \"created_at\": \"2024-07-24T11:19:16.000000Z\",\n            \"updated_at\": \"2024-07-24T11:19:16.000000Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"How to Install Android Rom\",\n    \"blog_id\": 1,\n    \"image\": \"https://placehold.co/600x400\",\n    \"article\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan vestibulum nisi a eleifend. Suspendisse ut mollis turpis, in accumsan nibh. Vivamus ut auctor turpis. Etiam eget fermentum mi, non rutrum nulla. Mauris posuere, nisl quis finibus tempor, felis ante dictum nisl, accumsan placerat odio nunc non lorem. Suspendisse ut metus id enim feugiat tempor. Mauris vestibulum dolor erat, ac ultrices lorem ornare pulvinar. Nam sit amet risus nec turpis imperdiet ultricies. Cras hendrerit rhoncus maximus. Nulla eu dolor nisi. Nunc pellentesque nec justo in posuere. Sed elementum vitae lectus sed ullamcorper. Proin sagittis vulputate massa, ut finibus nibh lacinia non.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/get-posts"
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"How to Install Android Rom\",\n    \"blog_id\": 1,\n    \"image\": \"https://placehold.co/600x400\",\n    \"article\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan vestibulum nisi a eleifend. Suspendisse ut mollis turpis, in accumsan nibh. Vivamus ut auctor turpis. Etiam eget fermentum mi, non rutrum nulla. Mauris posuere, nisl quis finibus tempor, felis ante dictum nisl, accumsan placerat odio nunc non lorem. Suspendisse ut metus id enim feugiat tempor. Mauris vestibulum dolor erat, ac ultrices lorem ornare pulvinar. Nam sit amet risus nec turpis imperdiet ultricies. Cras hendrerit rhoncus maximus. Nulla eu dolor nisi. Nunc pellentesque nec justo in posuere. Sed elementum vitae lectus sed ullamcorper. Proin sagittis vulputate massa, ut finibus nibh lacinia non.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/get-posts"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 11:48:07 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": true,\n    \"data\": {\n        \"id\": 21,\n        \"title\": \"How to Install Android Rom\",\n        \"image\": \"https://placehold.co/600x400\",\n        \"article\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan vestibulum nisi a eleifend. Suspendisse ut mollis turpis, in accumsan nibh. Vivamus ut auctor turpis. Etiam eget fermentum mi, non rutrum nulla. Mauris posuere, nisl quis finibus tempor, felis ante dictum nisl, accumsan placerat odio nunc non lorem. Suspendisse ut metus id enim feugiat tempor. Mauris vestibulum dolor erat, ac ultrices lorem ornare pulvinar. Nam sit amet risus nec turpis imperdiet ultricies. Cras hendrerit rhoncus maximus. Nulla eu dolor nisi. Nunc pellentesque nec justo in posuere. Sed elementum vitae lectus sed ullamcorper. Proin sagittis vulputate massa, ut finibus nibh lacinia non.\",\n        \"created_at\": \"2024-07-24T11:48:07.000000Z\",\n        \"updated_at\": \"2024-07-24T11:48:07.000000Z\",\n        \"blog\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Blog",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/get-posts/1"
+					},
+					"response": [
+						{
+							"name": "Get Blog",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/get-posts/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 11:38:53 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": true,\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Recusandae.\",\n        \"image\": \"https://via.placeholder.com/640x480.png/00bb77?text=repellat\",\n        \"article\": \"Libero quo aut et ipsam quisquam quod explicabo vel. Voluptates ea voluptas reprehenderit at qui minus aperiam. Qui eligendi laboriosam facilis nobis. Expedita eos quo corrupti.\",\n        \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n        \"updated_at\": \"2024-07-24T10:47:07.000000Z\",\n        \"blog\": {\n            \"id\": 1,\n            \"name\": \"Vetto\",\n            \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n            \"updated_at\": \"2024-07-24T11:24:36.000000Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Blogs",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/get-posts?blog_id=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"get-posts"
+							],
+							"query": [
+								{
+									"key": "blog_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Posts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/get-posts?blog_id=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"get-posts"
+									],
+									"query": [
+										{
+											"key": "blog_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 11:35:23 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": true,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"title\": \"Recusandae.\",\n                \"image\": \"https://via.placeholder.com/640x480.png/00bb77?text=repellat\",\n                \"article\": \"Libero quo aut et ipsam quisquam quod explicabo vel. Voluptates ea voluptas reprehenderit at qui minus aperiam. Qui eligendi laboriosam facilis nobis. Expedita eos quo corrupti.\",\n                \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"updated_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"blog\": {\n                    \"id\": 1,\n                    \"name\": \"Vetto\",\n                    \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n                    \"updated_at\": \"2024-07-24T11:24:36.000000Z\"\n                }\n            },\n            {\n                \"id\": 3,\n                \"title\": \"Et vel illo ut.\",\n                \"image\": \"https://via.placeholder.com/640x480.png/0044aa?text=ea\",\n                \"article\": \"Qui qui numquam nostrum magni ut. Qui est aut ut ab occaecati. Minus consequatur tempore et laborum.\",\n                \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"updated_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"blog\": {\n                    \"id\": 3,\n                    \"name\": \"Techzbyte\",\n                    \"created_at\": \"2024-07-24T11:19:16.000000Z\",\n                    \"updated_at\": \"2024-07-24T11:19:16.000000Z\"\n                }\n            },\n            {\n                \"id\": 4,\n                \"title\": \"Ea vel voluptatibus.\",\n                \"image\": \"https://via.placeholder.com/640x480.png/009900?text=pariatur\",\n                \"article\": \"Recusandae dolorem incidunt temporibus labore. Officia beatae sapiente aut. Enim voluptatem ut iusto natus et et.\",\n                \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"updated_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"blog\": null\n            },\n            {\n                \"id\": 6,\n                \"title\": \"Numquam sequi.\",\n                \"image\": \"https://via.placeholder.com/640x480.png/0088bb?text=sint\",\n                \"article\": \"Assumenda in ipsum dolore. Velit rerum consequatur praesentium occaecati assumenda illo. Asperiores minima aut voluptatum laboriosam molestias reiciendis enim.\",\n                \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"updated_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"blog\": null\n            },\n            {\n                \"id\": 7,\n                \"title\": \"Accusantium dolor.\",\n                \"image\": \"https://via.placeholder.com/640x480.png/0044cc?text=rerum\",\n                \"article\": \"Sapiente et nesciunt ipsum et qui culpa. Et sed ut voluptatem modi. Veniam quia vel dolorum itaque perspiciatis non architecto consequuntur. Excepturi ullam ea omnis impedit.\",\n                \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"updated_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"blog\": null\n            },\n            {\n                \"id\": 8,\n                \"title\": \"Amet ea doloremque.\",\n                \"image\": \"https://via.placeholder.com/640x480.png/003377?text=laboriosam\",\n                \"article\": \"Vero nisi ducimus harum ut et. Omnis cupiditate est adipisci. Illum animi modi maxime dolores in. Quidem quia aperiam ut odio.\",\n                \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"updated_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"blog\": null\n            },\n            {\n                \"id\": 11,\n                \"title\": \"Sit possimus.\",\n                \"image\": \"https://via.placeholder.com/640x480.png/0011dd?text=provident\",\n                \"article\": \"Unde quis rerum nulla occaecati et facere consequatur. A culpa autem numquam assumenda. Nostrum velit ratione id et.\",\n                \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"updated_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"blog\": null\n            },\n            {\n                \"id\": 13,\n                \"title\": \"Beatae consequatur.\",\n                \"image\": \"https://via.placeholder.com/640x480.png/007722?text=corporis\",\n                \"article\": \"Assumenda earum hic totam voluptas laboriosam exercitationem. Placeat itaque eum adipisci corrupti voluptas nostrum. Nulla culpa et sint laboriosam et earum molestias. Consequuntur qui quis quis.\",\n                \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"updated_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"blog\": null\n            },\n            {\n                \"id\": 15,\n                \"title\": \"Error sapiente.\",\n                \"image\": \"https://via.placeholder.com/640x480.png/00aaaa?text=omnis\",\n                \"article\": \"Dolorum animi impedit aut. Est sapiente ratione neque adipisci sed ut maiores rerum. Eius nihil ut placeat corporis.\",\n                \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"updated_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"blog\": null\n            },\n            {\n                \"id\": 16,\n                \"title\": \"Voluptates magni.\",\n                \"image\": \"https://via.placeholder.com/640x480.png/0099cc?text=doloremque\",\n                \"article\": \"Reiciendis neque dolorum officia aut. Porro nemo quaerat tenetur doloremque. Et iste delectus molestias cupiditate ex voluptatibus neque. Et aut et et est expedita sapiente.\",\n                \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"updated_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"blog\": null\n            }\n        ],\n        \"first_page_url\": \"http://localhost:3050/api/get-posts?page=1\",\n        \"from\": 1,\n        \"last_page\": 2,\n        \"last_page_url\": \"http://localhost:3050/api/get-posts?page=2\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:3050/api/get-posts?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://localhost:3050/api/get-posts?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:3050/api/get-posts?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": \"http://localhost:3050/api/get-posts?page=2\",\n        \"path\": \"http://localhost:3050/api/get-posts\",\n        \"per_page\": 10,\n        \"prev_page_url\": null,\n        \"to\": 10,\n        \"total\": 13\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Like Post",
+			"item": [
+				{
+					"name": "Unlike",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"post_id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/unlike-post"
+					},
+					"response": [
+						{
+							"name": "Unlike",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"post_id\": 3\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/like-post"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 12:54:22 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": true,\n    \"data\": {\n        \"id\": 8,\n        \"post_id\": 3,\n        \"likes\": 1,\n        \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n        \"updated_at\": \"2024-07-24T12:54:22.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Like",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"post_id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/like-post"
+					},
+					"response": [
+						{
+							"name": "Like",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"post_id\": 3\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/like-post"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 12:54:22 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": true,\n    \"data\": {\n        \"id\": 8,\n        \"post_id\": 3,\n        \"likes\": 1,\n        \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n        \"updated_at\": \"2024-07-24T12:54:22.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Comment Post",
+			"item": [
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/get-comments/8"
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/get-comments/8"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 12:25:22 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": true,\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 52,\n    \"comment\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan vestibulum nisi a eleifend. Suspendisse ut mollis turpis, in accumsan nibh. Vivamus ut auctor turpis. Etiam eget fermentum mi, non rutrum nulla. Mauris posuere, nisl quis finibus tempor, felis ante dictum nisl, accumsan placerat odio nunc non lorem. Suspendisse ut metus id enim feugiat tempor. Mauris vestibulum dolor erat, ac ultrices lorem ornare pulvinar. Nam sit amet risus nec turpis imperdiet ultricies. Cras hendrerit rhoncus maximus. Nulla eu dolor nisi. Nunc pellentesque nec justo in posuere. Sed elementum vitae lectus sed ullamcorper. Proin sagittis vulputate massa, ut finibus nibh lacinia non.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/get-comments"
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 52,\n    \"comment\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan vestibulum nisi a eleifend. Suspendisse ut mollis turpis, in accumsan nibh. Vivamus ut auctor turpis. Etiam eget fermentum mi, non rutrum nulla. Mauris posuere, nisl quis finibus tempor, felis ante dictum nisl, accumsan placerat odio nunc non lorem. Suspendisse ut metus id enim feugiat tempor. Mauris vestibulum dolor erat, ac ultrices lorem ornare pulvinar. Nam sit amet risus nec turpis imperdiet ultricies. Cras hendrerit rhoncus maximus. Nulla eu dolor nisi. Nunc pellentesque nec justo in posuere. Sed elementum vitae lectus sed ullamcorper. Proin sagittis vulputate massa, ut finibus nibh lacinia non.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/get-comments"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 12:22:27 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": true,\n    \"data\": {\n        \"id\": 52,\n        \"comment\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan vestibulum nisi a eleifend. Suspendisse ut mollis turpis, in accumsan nibh. Vivamus ut auctor turpis. Etiam eget fermentum mi, non rutrum nulla. Mauris posuere, nisl quis finibus tempor, felis ante dictum nisl, accumsan placerat odio nunc non lorem. Suspendisse ut metus id enim feugiat tempor. Mauris vestibulum dolor erat, ac ultrices lorem ornare pulvinar. Nam sit amet risus nec turpis imperdiet ultricies. Cras hendrerit rhoncus maximus. Nulla eu dolor nisi. Nunc pellentesque nec justo in posuere. Sed elementum vitae lectus sed ullamcorper. Proin sagittis vulputate massa, ut finibus nibh lacinia non.\",\n        \"created_at\": \"2024-07-24T12:18:56.000000Z\",\n        \"updated_at\": \"2024-07-24T12:22:27.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"post_id\": 3,\n    \"comment\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan vestibulum nisi a eleifend. Suspendisse ut mollis turpis, in accumsan nibh. Vivamus ut auctor turpis. Etiam eget fermentum mi, non rutrum nulla. Mauris posuere, nisl quis finibus tempor, felis ante dictum nisl, accumsan placerat odio nunc non lorem. Suspendisse ut metus id enim feugiat tempor. Mauris vestibulum dolor erat, ac ultrices lorem ornare pulvinar. Nam sit amet risus nec turpis imperdiet ultricies. Cras hendrerit rhoncus maximus. Nulla eu dolor nisi. Nunc pellentesque nec justo in posuere. Sed elementum vitae lectus sed ullamcorper. Proin sagittis vulputate massa, ut finibus nibh lacinia non.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/get-comments"
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"post_id\": 3,\n    \"comment\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan vestibulum nisi a eleifend. Suspendisse ut mollis turpis, in accumsan nibh. Vivamus ut auctor turpis. Etiam eget fermentum mi, non rutrum nulla. Mauris posuere, nisl quis finibus tempor, felis ante dictum nisl, accumsan placerat odio nunc non lorem. Suspendisse ut metus id enim feugiat tempor. Mauris vestibulum dolor erat, ac ultrices lorem ornare pulvinar. Nam sit amet risus nec turpis imperdiet ultricies. Cras hendrerit rhoncus maximus. Nulla eu dolor nisi. Nunc pellentesque nec justo in posuere. Sed elementum vitae lectus sed ullamcorper. Proin sagittis vulputate massa, ut finibus nibh lacinia non.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/get-comments"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 12:18:56 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": true,\n    \"data\": {\n        \"comment\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan vestibulum nisi a eleifend. Suspendisse ut mollis turpis, in accumsan nibh. Vivamus ut auctor turpis. Etiam eget fermentum mi, non rutrum nulla. Mauris posuere, nisl quis finibus tempor, felis ante dictum nisl, accumsan placerat odio nunc non lorem. Suspendisse ut metus id enim feugiat tempor. Mauris vestibulum dolor erat, ac ultrices lorem ornare pulvinar. Nam sit amet risus nec turpis imperdiet ultricies. Cras hendrerit rhoncus maximus. Nulla eu dolor nisi. Nunc pellentesque nec justo in posuere. Sed elementum vitae lectus sed ullamcorper. Proin sagittis vulputate massa, ut finibus nibh lacinia non.\",\n        \"updated_at\": \"2024-07-24T12:18:56.000000Z\",\n        \"created_at\": \"2024-07-24T12:18:56.000000Z\",\n        \"id\": 52\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Blog",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/get-comments/7"
+					},
+					"response": [
+						{
+							"name": "Get Comment",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/get-comments/7"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 12:30:00 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": true,\n    \"data\": {\n        \"id\": 7,\n        \"comment\": \"Debitis esse labore rerum ea aliquam ut.\",\n        \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n        \"updated_at\": \"2024-07-24T10:47:07.000000Z\",\n        \"post\": {\n            \"id\": 16,\n            \"title\": \"Voluptates magni.\",\n            \"image\": \"https://via.placeholder.com/640x480.png/0099cc?text=doloremque\",\n            \"article\": \"Reiciendis neque dolorum officia aut. Porro nemo quaerat tenetur doloremque. Et iste delectus molestias cupiditate ex voluptatibus neque. Et aut et et est expedita sapiente.\",\n            \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n            \"updated_at\": \"2024-07-24T10:47:07.000000Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Blogs",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/get-comments?post_id=3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"get-comments"
+							],
+							"query": [
+								{
+									"key": "post_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Comments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/get-comments?post_id=3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"get-comments"
+									],
+									"query": [
+										{
+											"key": "post_id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.25.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Jul 2024 12:30:57 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": true,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 10,\n                \"comment\": \"Et et labore minus. Saepe atque dolor et vitae.\",\n                \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"updated_at\": \"2024-07-24T10:47:07.000000Z\"\n            },\n            {\n                \"id\": 15,\n                \"comment\": \"Est nisi nulla sequi culpa officiis.\",\n                \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"updated_at\": \"2024-07-24T10:47:07.000000Z\"\n            },\n            {\n                \"id\": 35,\n                \"comment\": \"Molestias at ad quibusdam.\",\n                \"created_at\": \"2024-07-24T10:47:07.000000Z\",\n                \"updated_at\": \"2024-07-24T10:47:07.000000Z\"\n            },\n            {\n                \"id\": 51,\n                \"comment\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan vestibulum nisi a eleifend. Suspendisse ut mollis turpis, in accumsan nibh. Vivamus ut auctor turpis. Etiam eget fermentum mi, non rutrum nulla. Mauris posuere, nisl quis finibus tempor, felis ante dictum nisl, accumsan placerat odio nunc non lorem. Suspendisse ut metus id enim feugiat tempor. Mauris vestibulum dolor erat, ac ultrices lorem ornare pulvinar. Nam sit amet risus nec turpis imperdiet ultricies. Cras hendrerit rhoncus maximus. Nulla eu dolor nisi. Nunc pellentesque nec justo in posuere. Sed elementum vitae lectus sed ullamcorper. Proin sagittis vulputate massa, ut finibus nibh lacinia non.\",\n                \"created_at\": \"2024-07-24T12:17:06.000000Z\",\n                \"updated_at\": \"2024-07-24T12:17:06.000000Z\"\n            },\n            {\n                \"id\": 52,\n                \"comment\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan vestibulum nisi a eleifend. Suspendisse ut mollis turpis, in accumsan nibh. Vivamus ut auctor turpis. Etiam eget fermentum mi, non rutrum nulla. Mauris posuere, nisl quis finibus tempor, felis ante dictum nisl, accumsan placerat odio nunc non lorem. Suspendisse ut metus id enim feugiat tempor. Mauris vestibulum dolor erat, ac ultrices lorem ornare pulvinar. Nam sit amet risus nec turpis imperdiet ultricies. Cras hendrerit rhoncus maximus. Nulla eu dolor nisi. Nunc pellentesque nec justo in posuere. Sed elementum vitae lectus sed ullamcorper. Proin sagittis vulputate massa, ut finibus nibh lacinia non.\",\n                \"created_at\": \"2024-07-24T12:18:56.000000Z\",\n                \"updated_at\": \"2024-07-24T12:22:27.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost:3050/api/get-comments?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:3050/api/get-comments?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:3050/api/get-comments?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:3050/api/get-comments\",\n        \"per_page\": 10,\n        \"prev_page_url\": null,\n        \"to\": 5,\n        \"total\": 5\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -9,7 +9,7 @@ class LikeService extends Repository
 {
     public function like_action($request, $action)
     {
-        if ($action == 'like' && $this->like()->store($request)) {
+        if ($action == 'like' && $this->like()->like($request)) {
             return $this->response(true, $this->like()->show($request->post_id), Response::HTTP_OK);
         }
         else if ($action == 'unlike' && $this->like()->unlike($request)) {

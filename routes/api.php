@@ -22,6 +22,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('get-comments/{id}', [\App\Http\Controllers\CommentController::class, 'show']);
     Route::get('get-comments', [\App\Http\Controllers\CommentController::class, 'index']);
 
-    Route::post('get-likes', [\App\Http\Controllers\LikeController::class, 'unlike']);
-    Route::post('get-likes', [\App\Http\Controllers\LikeController::class, 'like']);
+    Route::post('unlike-post', [\App\Http\Controllers\LikeController::class, 'unlike']);
+    Route::post('like-post', [\App\Http\Controllers\LikeController::class, 'like']);
 });
