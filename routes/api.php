@@ -16,15 +16,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('get-posts/{id}', [\App\Http\Controllers\PostController::class, 'show']);
     Route::get('get-posts', [\App\Http\Controllers\PostController::class, 'index']);
 
-    Route::delete('get-likes', [\App\Http\Controllers\LikeController::class, 'index']);
-    Route::patch('get-likes', [\App\Http\Controllers\LikeController::class, 'index']);
-    Route::post('get-likes', [\App\Http\Controllers\LikeController::class, 'index']);
-    Route::get('get-likes/{id}', [\App\Http\Controllers\LikeController::class, 'index']);
-    Route::get('get-likes', [\App\Http\Controllers\LikeController::class, 'index']);
-
-    Route::delete('get-comments', [\App\Http\Controllers\CommentController::class, 'index']);
-    Route::patch('get-comments', [\App\Http\Controllers\CommentController::class, 'index']);
-    Route::post('get-comments', [\App\Http\Controllers\CommentController::class, 'index']);
-    Route::get('get-comments/{id}', [\App\Http\Controllers\CommentController::class, 'index']);
+    Route::delete('get-comments/{id}', [\App\Http\Controllers\CommentController::class, 'destroy']);
+    Route::patch('get-comments', [\App\Http\Controllers\CommentController::class, 'update']);
+    Route::post('get-comments', [\App\Http\Controllers\CommentController::class, 'store']);
+    Route::get('get-comments/{id}', [\App\Http\Controllers\CommentController::class, 'show']);
     Route::get('get-comments', [\App\Http\Controllers\CommentController::class, 'index']);
+
+    Route::post('get-likes', [\App\Http\Controllers\LikeController::class, 'unlike']);
+    Route::post('get-likes', [\App\Http\Controllers\LikeController::class, 'like']);
 });

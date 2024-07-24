@@ -4,7 +4,7 @@
 namespace App\Repository\Queries;
 
 
-use App\Models\Post;
+use App\Models\Comment;
 
 class CommentQueries
 {
@@ -12,35 +12,30 @@ class CommentQueries
 
     public function __construct()
     {
-        $this->model = new Post;
+        $this->model = new Comment();
     }
 
-    public function index($blog_id)
+    public function index($post_id)
     {
-        return $this->model->with(['blog'])->where('blog_id', $blog_id)->paginate(10);
+        return $this->model->where('post_id', $post_id)->paginate(10);
     }
 
     public function show($id)
     {
-        return $this->model->with('blog')->where('id', $id)->first();
+        return $this->model->with('post')->where('id', $id)->first();
     }
 
     public function store($request)
     {
         return $this->model->create([
-            'title'   => $request->title,
-            'article' => $request->article,
-            'blog_id' => $request->blog_id,
-            'image'   => $request->image,
+            'comment' => $request->comment, 'post_id' => $request->post_id
         ]);
     }
 
     public function update($request)
     {
         return $this->model->where('id', $request->id)->update([
-            'title'   => $request->title,
-            'article' => $request->article,
-            'image'   => $request->image,
+            'comment'   => $request->comment,
         ]);
     }
 

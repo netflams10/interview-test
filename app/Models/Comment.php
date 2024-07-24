@@ -9,10 +9,12 @@ class Comment extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['comment'];
+    protected $fillable = ['comment', 'post_id'];
+
+    protected $hidden = ['post_id'];
 
     public function post()
     {
-        $this->hasOne(Post::class);
+        return $this->hasOne(Post::class, 'id', 'post_id');
     }
 }

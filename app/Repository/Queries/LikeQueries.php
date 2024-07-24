@@ -15,32 +15,18 @@ class LikeQueries
         $this->model = new Like();
     }
 
-    public function index($blog_id)
+    public function show($post_id)
     {
-        return $this->model->with(['blog'])->where('blog_id', $blog_id)->paginate(10);
+        return $this->model->where('post_id', $post_id)->first();
     }
 
-    public function show($id)
+    public function like ($request)
     {
-        return $this->model->with('blog')->where('id', $id)->first();
+        return $this->model->where('post_id', $request->post_id)->update(['likes' => $this->show($request->post_id) + 1]);
     }
 
-    public function store($post_id)
+    public function unlike ($request)
     {
-        return $this->model->create(['post_id' => $post_id, 'likes' => 0]);
-    }
-
-    public function update($request)
-    {
-        return $this->model->where('id', $request->id)->update([
-            'title'   => $request->title,
-            'article' => $request->article,
-            'image'   => $request->image,
-        ]);
-    }
-
-    public function destroy($id)
-    {
-        return $this->model->where('id', $id)->delete();
+        return $this->model->where('post_id', $request->post_id)->update(['likes' => $this->show($request->post_id) - 1]);
     }
 }

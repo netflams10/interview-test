@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Post\PostCreateRequest;
 use App\Http\Requests\Post\PostUpdateRequest;
 use App\Service\PostService;
-use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
