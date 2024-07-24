@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Like;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -23,4 +24,11 @@ class PostFactory extends Factory
             'image' => $this->faker->imageUrl(),
         ];
     }
+
+//    public function configure()
+//    {
+//        return $this->afterCreating(function (Post $post) {
+//            Like::factory()->create(['post_id' => $post->id]);
+//        });
+//    }
 }

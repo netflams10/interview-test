@@ -30,7 +30,9 @@ class LikeFactory extends Factory
     public function definition(): array
     {
         return [
-            'post_id'    => $this->get_post_id(),
+//            'post_id'    => $this->get_post_id(),
+//            'likes'      => $this->faker->randomDigit(),
+            'post_id'    => \App\Models\Post::factory(),
             'likes'      => $this->faker->randomDigit(),
         ];
     }
