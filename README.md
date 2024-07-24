@@ -14,6 +14,7 @@
 ##### Docker Setup
 - docker-compose up -d
 - docker compose exec php bash
+- composer install
 - php artisan migrate --seed
 
 ##### Remove Docker File
@@ -21,7 +22,7 @@
 
 ## Notes
 
-- nginx open to application by default on port: 3050
+- nginx connects to the application with default on port: 3050
 - use /api on base url
 - if you are using docker-compose please docker compose might give error response, Please know which you are using.
 
