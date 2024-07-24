@@ -7,35 +7,44 @@ use Symfony\Component\HttpFoundation\Response;
 
 class PostService extends Repository
 {
-    public function index()
+    public function index($blog_id)
     {
-        if ($posts = $this->post()->index()) {
-            return $this->response($posts, Response::HTTP_OK);
+        if ($posts = $this->post()->index($blog_id)) {
+            return $this->response(true, $posts, Response::HTTP_OK);
         }
-        return $this->response(['message' => 'Empty posts'], Response::HTTP_OK);
+        return $this->response(false, [], Response::HTTP_OK);
     }
 
-    public function show()
+    public function show($id)
     {
-        $response = $this->post()->index();
-        return response()->json($response['message'], $response['status']);
+        if ($post = $this->post()->show($id)) {
+            return $this->response(true, $post, Response::HTTP_OK);
+        }
+        return $this->response(false, [], Response::HTTP_OK);
     }
 
-    public function store()
+    public function store($request)
     {
-        $response = $this->post()->index();
-        return response()->json($response['message'], $response['status']);
+        $post = $this->post()->store($request);
+        if ($post && $this->like()->store($post->id)) {
+            return $this->response(true, $this->post()->show($post->id), Response::HTTP_OK);
+        }
+        return $this->response(false, [], Response::HTTP_UNPROCESSABLE_ENTITY);
     }
 
-    public function update()
+    public function update($request)
     {
-        $response = $this->post()->index();
-        return response()->json($response['message'], $response['status']);
+        if ($post = $this->post()->update($request)) {
+            return $this->response(true, $this->post()->show($request->id), Response::HTTP_OK);
+        }
+        return $this->response(false, [], Response::HTTP_UNPROCESSABLE_ENTITY);
     }
 
-    public function destroy()
+    public function destroy($id)
     {
-        $posts = $this->post()->index();
-        return response()->json($response['message'], $response['status']);
+        if ($post = $this->post()->destroy($id)) {
+            return $this->response(true, $this->post()->show($id), Response::HTTP_OK);
+        }
+        return $this->response(false, [], Response::HTTP_UNPROCESSABLE_ENTITY);
     }
 }

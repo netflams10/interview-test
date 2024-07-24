@@ -6,7 +6,7 @@ namespace App\Repository\Queries;
 
 use App\Models\Post;
 
-class PostQueries
+class CommentQueries
 {
     private $model;
 

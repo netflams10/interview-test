@@ -11,6 +11,8 @@ class Post extends Model
 
     protected $fillable = ['title', 'article', 'blog_id', 'image'];
 
+    protected $hidden = ['blog_id'];
+
     public function comments()
     {
         return $this->hasMany(Comment::class);
@@ -19,5 +21,10 @@ class Post extends Model
     public function like()
     {
         return $this->hasOne(Like::class);
+    }
+
+    public function blog()
+    {
+        return $this->hasOne(Blog::class, 'id');
     }
 }

@@ -27,6 +27,16 @@ class BlogQueries
 
     public function store($request)
     {
-        return $this->model->create($request);
+        return $this->model->create(['name' => $request->name]);
+    }
+
+    public function update($request)
+    {
+        return $this->model->where('id', $request->id)->update(['name' => $request->name]);
+    }
+
+    public function destroy($id)
+    {
+        return $this->model->where('id', $id)->delete();
     }
 }

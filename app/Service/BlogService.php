@@ -31,15 +31,19 @@ class BlogService extends Repository
         return $this->response(false, [], Response::HTTP_OK);
     }
 
-    public function update()
+    public function update($request)
     {
-        $response = $this->post()->index();
-        return response()->json($response['message'], $response['status']);
+        if ($posts = $this->blog()->update($request)) {
+            return $this->response(true, $this->blog()->show($request->id), Response::HTTP_OK);
+        }
+        return $this->response(false, [], Response::HTTP_OK);
     }
 
-    public function destroy()
+    public function destroy($id)
     {
-        $posts = $this->post()->index();
-        return response()->json($response['message'], $response['status']);
+        if ($posts = $this->blog()->destroy($id)) {
+            return $this->response(true, $this->blog()->show($id), Response::HTTP_OK);
+        }
+        return $this->response(false, [], Response::HTTP_OK);
     }
 }

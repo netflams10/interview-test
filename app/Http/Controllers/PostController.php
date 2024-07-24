@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Post\PostCreateRequest;
+use App\Http\Requests\Post\PostUpdateRequest;
 use App\Service\PostService;
 use Illuminate\Http\Request;
 
@@ -15,31 +17,32 @@ class PostController extends Controller
     }
     public function index()
     {
-        $response = $this->service->index();
+        $blog_id = request()->query('blog_id') ?? "";
+        $response = $this->service->index($blog_id);
         return response()->json($response['message'], $response['status']);
     }
 
-    public function show()
+    public function show($id)
     {
-        $response = $this->service->index();
+        $response = $this->service->show($id);
         return response()->json($response['message'], $response['status']);
     }
 
-    public function store()
+    public function store(PostCreateRequest $request)
     {
-        $response = $this->service->index();
+        $response = $this->service->store($request);
         return response()->json($response['message'], $response['status']);
     }
 
-    public function update()
+    public function update(PostUpdateRequest $request)
     {
-        $response = $this->service->index();
+        $response = $this->service->update($request);
         return response()->json($response['message'], $response['status']);
     }
 
     public function destroy($id)
     {
-        $response = $this->service->index();
+        $response = $this->service->destroy($id);
         return response()->json($response['message'], $response['status']);
     }
 }

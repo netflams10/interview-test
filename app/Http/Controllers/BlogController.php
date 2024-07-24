@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Blog\BlogCreateRequest;
+use App\Http\Requests\Blog\BlogUpdateRequest;
 use App\Service\BlogService;
 use Illuminate\Http\Request;
 
@@ -32,15 +33,15 @@ class BlogController extends Controller
         return response()->json($response['message'], $response['status']);
     }
 
-    public function update()
+    public function update(BlogUpdateRequest $request)
     {
-        $response = $this->service->index();
+        $response = $this->service->update($request);
         return response()->json($response['message'], $response['status']);
     }
 
     public function destroy($id)
     {
-        $response = $this->service->index();
+        $response = $this->service->destroy($id);
         return response()->json($response['message'], $response['status']);
     }
 }

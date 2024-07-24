@@ -3,9 +3,8 @@
 namespace App\Http\Requests\Blog;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Http\Exceptions\HttpResponseException;
 
-class BlogCreateRequest extends FormRequest
+class BlogUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,6 +23,7 @@ class BlogCreateRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string'],
+            'id'   => ['required', 'numeric']
         ];
     }
 }

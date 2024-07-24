@@ -17,7 +17,12 @@ abstract class Repository
 
     public function like()
     {
-        return new \App\Repository\Queries\PostLike();
+        return new \App\Repository\Queries\LikeQueries();
+    }
+
+    public function comment()
+    {
+        return new \App\Repository\Queries\CommentQueries();
     }
 
     public function response($message, $data, $status)

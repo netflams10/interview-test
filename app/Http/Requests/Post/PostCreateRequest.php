@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Blog;
+namespace App\Http\Requests\Post;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Http\Exceptions\HttpResponseException;
 
-class BlogCreateRequest extends FormRequest
+class PostCreateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,7 +22,10 @@ class BlogCreateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string'],
+            'title'   => ['required', 'string'],
+            'article' => ['required', 'string'],
+            'blog_id' => ['required', 'numeric'],
+            'image'   => ['required', 'string']
         ];
     }
 }

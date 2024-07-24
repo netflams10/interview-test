@@ -4,15 +4,15 @@
 namespace App\Repository\Queries;
 
 
-use App\Models\Post;
+use App\Models\Like;
 
-class PostQueries
+class LikeQueries
 {
     private $model;
 
     public function __construct()
     {
-        $this->model = new Post;
+        $this->model = new Like();
     }
 
     public function index($blog_id)
@@ -25,14 +25,9 @@ class PostQueries
         return $this->model->with('blog')->where('id', $id)->first();
     }
 
-    public function store($request)
+    public function store($post_id)
     {
-        return $this->model->create([
-            'title'   => $request->title,
-            'article' => $request->article,
-            'blog_id' => $request->blog_id,
-            'image'   => $request->image,
-        ]);
+        return $this->model->create(['post_id' => $post_id, 'likes' => 0]);
     }
 
     public function update($request)
